@@ -1,4 +1,4 @@
-VERSION=5.9.1
+VERSION=6.0.b1
 wget -qO- https://www.rarlab.com/rar/rarlinux-x64-${VERSION}.tar.gz | tar -xz
 cd rar
 
