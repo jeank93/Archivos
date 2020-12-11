@@ -59,10 +59,10 @@ printf "$g$b    Installing Desktop Environment $endc$enda" >&2
 {
     sudo DEBIAN_FRONTEND=noninteractive \
         apt install --assume-yes xfce4 desktop-base
-	sudo git clone https://github.com/evandrocoan/MyLinuxSettings.git ~/Downloads/MyLinuxSettings
-	sudo rsync -r -t -v -s ~/Downloads/MyLinuxSettings/ ~/
+	git clone https://github.com/evandrocoan/MyLinuxSettings.git ~/Downloads/MyLinuxSettings
+	rsync -r -t -v -s ~/Downloads/MyLinuxSettings/ ~/
 	git config --global core.excludesfile ~/.gitignore_global
-	chmod 600 ~/.ssh/config
+#sudo chmod 600 ~/.ssh/config
     sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
     sudo apt install --assume-yes xscreensaver
     sudo systemctl disable lightdm.service
