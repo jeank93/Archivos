@@ -58,11 +58,7 @@ printf "\r$c$b    Chrome Remote Desktop Installed $endc$enda\n" >&2 ||
 printf "$g$b    Installing Desktop Environment $endc$enda" >&2
 {
     sudo DEBIAN_FRONTEND=noninteractive \
-        apt install --assume-yes xfce4 desktop-base xfce4-whiskermenu-plugin
-    git clone https://github.com/evandrocoan/MyLinuxSettings.git /home/user/Downloads/MyLinuxSettings
-    rsync -r -t -v -s /home/user/Downloads/MyLinuxSettings/ /home/user/
-    git config --global core.excludesfile /home/user/.gitignore_global
-#sudo chmod 600 /home/user/.ssh/config
+        apt install --assume-yes xfce4 desktop-base
     sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
     sudo apt install --assume-yes xscreensaver
     sudo systemctl disable lightdm.service
