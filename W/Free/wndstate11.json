@@ -1,0 +1,28 @@
+{
+    "token_id": "",
+    "token": "",
+    "token_signature": "",
+    "token_signature_time": "0",
+    "loc_hash": "45e2f5db85f905987f2ede9fc99f3d7f049bacc2",
+    "loc_rev": 32744,
+    "is_premium": false,
+    "status": 1,
+    "user_id": "z9yqgcxo",
+    "session_auth_hash": "53399093:2:1662837681:1018795ae22a9d1440a505fe0b67885f560c59e004:ca01a70db78de3254c818e5f1d02b17d573e687ba2",
+    "proxy_username": "z9yqgcxo-g8ksnec",
+    "proxy_password": "7wx9nfs23e",
+    "settings": {
+        "client_auth_secret": "952b4412f002315aa50751032fcaab03",
+        "platform": "chrome",
+        "type": "chrome",
+        "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36",
+        "origin": "chrome-extension://hnmpcagpplmpfojmgmnngilcnanddlhb",
+        "session_type": 2,
+        "endpoints": {
+            "Session": "https://api.windscribe.com/Session",
+            "serverlist": "https://assets.windscribe.com/serverlist",
+            "ServerCredentials": "https://api.windscribe.com/ServerCredentials",
+            "BestLocation": "https://api.windscribe.com/BestLocation"
+        }
+    }
+}
