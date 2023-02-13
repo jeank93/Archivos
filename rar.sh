@@ -1,4 +1,4 @@
-VERSION=6.0.2
+VERSION=620
 wget -qO- https://www.rarlab.com/rar/rarlinux-x64-${VERSION}.tar.gz | tar -xz
 cd rar
 
