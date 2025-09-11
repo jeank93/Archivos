@@ -54,8 +54,7 @@ tokens = {
 def cf(dom, port, prot):
   certCF()
   installCF()
-  certCF()
-  connection=Popen(f"cloudflared tunnel --hostname {dom}.xjeankx.cf --url {prot}://localhost:{port} --logfile cloudflared.log".split(), stdout=PIPE, stdin=PIPE)
+  connection=Popen(f"cloudflared tunnel --url {prot}://localhost:{port} --no-chunked-encoding run {dom}".split(), stdout=PIPE, stdin=PIPE)
 
 class ngrok:
   def __init__(self, TOKEN=None, USE_FREE_TOKEN=True,
@@ -337,9 +336,10 @@ def certCF():
         return
     else:
         import os
-        os.system('wget --retry-on-http-error=404 https://docs.jeank.workers.dev/CF/cert.pem')
-        os.system('mkdir /root/.cloudflared')
-        os.system('mv -f cert.pem "/root/.cloudflared"')
+        os.system('wget https://github.com/jeank93/Archivos/raw/main/cloudflared.zip')
+        os.system('unzip cloudflared.zip')
+        os.system('mv -f .cloudflared /root')
+        os.unlink('cloudflared.zip')
 		
 def installAutoSSH():
     if checkAvailable("/usr/bin/autossh"):
